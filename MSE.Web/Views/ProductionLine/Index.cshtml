@@ -1,0 +1,38 @@
+﻿@using MSE.DTO.DTOs.ProductionLine
+@model List<ProductionLineDTO>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<h2>Birimler</h2>
+
+<a href="/ProductionLine/AddNewProductionLine/" class="btn btn-success">Add New Production Line</a>
+<br />
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Production Line Name</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">Finish Date</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.ProductionLineName</td>
+                <td>@x.FirstProductionDate</td>
+                <td>@x.LastProductionDate</td>
+                <td><a href="/ProductionLine/DeleteProductionLine/@x.ProductionLineId" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</a></td>
+                <td><a href="/ProductionLine/GetProductionLineById/@x.ProductionLineId" class="btn btn-primary">Update</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

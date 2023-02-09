@@ -1,0 +1,17 @@
+D:\repos\MseProject\MSE.DataAccess\bin\Debug\net6.0\MSE.DataAccess.deps.json
+D:\repos\MseProject\MSE.DataAccess\bin\Debug\net6.0\MSE.DataAccess.runtimeconfig.json
+D:\repos\MseProject\MSE.DataAccess\bin\Debug\net6.0\MSE.DataAccess.dll
+D:\repos\MseProject\MSE.DataAccess\bin\Debug\net6.0\MSE.DataAccess.pdb
+D:\repos\MseProject\MSE.DataAccess\bin\Debug\net6.0\MSE.Entity.dll
+D:\repos\MseProject\MSE.DataAccess\bin\Debug\net6.0\MSE.Entity.pdb
+D:\repos\MseProject\MSE.DataAccess\obj\Debug\net6.0\MSE.DataAccess.csproj.AssemblyReference.cache
+D:\repos\MseProject\MSE.DataAccess\obj\Debug\net6.0\MSE.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\repos\MseProject\MSE.DataAccess\obj\Debug\net6.0\MSE.DataAccess.AssemblyInfoInputs.cache
+D:\repos\MseProject\MSE.DataAccess\obj\Debug\net6.0\MSE.DataAccess.AssemblyInfo.cs
+D:\repos\MseProject\MSE.DataAccess\obj\Debug\net6.0\MSE.DataAccess.csproj.CoreCompileInputs.cache
+D:\repos\MseProject\MSE.DataAccess\obj\Debug\net6.0\MSE.DataAccess.csproj.CopyComplete
+D:\repos\MseProject\MSE.DataAccess\obj\Debug\net6.0\MSE.DataAccess.dll
+D:\repos\MseProject\MSE.DataAccess\obj\Debug\net6.0\refint\MSE.DataAccess.dll
+D:\repos\MseProject\MSE.DataAccess\obj\Debug\net6.0\MSE.DataAccess.pdb
+D:\repos\MseProject\MSE.DataAccess\obj\Debug\net6.0\MSE.DataAccess.genruntimeconfig.cache
+D:\repos\MseProject\MSE.DataAccess\obj\Debug\net6.0\ref\MSE.DataAccess.dll

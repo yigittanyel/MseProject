@@ -1,0 +1,31 @@
+﻿@model MSE.DTO.DTOs.ProductionLine.ProductionLineDTO
+
+@{
+    ViewData["Title"] = "GetProductionLineById";
+}
+
+
+<h2>Production Line Information</h2>
+@using (Html.BeginForm("UpdateProductionLine","ProductionLine",FormMethod.Post))
+{
+<div class="padding:10px;">
+    @Html.HiddenFor(x => x.ProductionLineId)
+    <div>
+        <label>Production Line Name: </label><br />
+        @Html.TextBoxFor(q => q.ProductionLineName, new { @class = "form-control" })
+    </div>
+    <div>
+        <label>Start Date: </label><br />
+        @Html.TextBoxFor(q => q.FirstProductionDate, new { @class = "form-control" })
+    </div>
+    <div>
+        <label>Finish Date: </label><br />
+        @Html.TextBoxFor(q => q.LastProductionDate, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px;">
+        <button class="btn btn-info">Update</button>
+    </div>
+</div>
+}
+
+
