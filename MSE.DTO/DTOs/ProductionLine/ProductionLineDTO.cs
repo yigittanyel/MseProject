@@ -13,5 +13,6 @@ namespace MSE.DTO.DTOs.ProductionLine
         public string ProductionLineName { get; set; }
         public DateTime FirstProductionDate { get; set; }
         public DateTime LastProductionDate { get; set; }
+
     }
 }

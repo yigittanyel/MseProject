@@ -1,0 +1,43 @@
+﻿@using MSE.Entity.Entities.Concrete
+@model List<WorkStationPersonnel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<h2>Maintenance Personnels - Work Station List</h2>
+
+<a href="/PersonnelStation/AddNew/" class="btn btn-success">Add New</a>
+<br />
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Personnel Name</th>
+            <th scope="col">Personnel Surname</th>
+            <th scope="col">Personnel Phone</th>
+            <th scope="col">Personnel Email</th>
+            <th scope="col">Work Station Name</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.MaintenancePersonnel.Name</td>
+                <td>@x.MaintenancePersonnel.Surname</td>
+                <td>@x.MaintenancePersonnel.PhoneNumber</td>
+                <td>@x.MaintenancePersonnel.EmailAdress</td>
+                <td>@x.WorkStation.StationName</td>
+                <td><a href="/PersonnelStation/Delete/@x.Id" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</a></td>
+                <td><a href="/PersonnelStation/GetById/@x.Id" class="btn btn-primary">Update</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

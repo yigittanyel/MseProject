@@ -14,6 +14,7 @@ namespace MSE.DTO.DTOs.WorkStation
         public decimal Pressure { get; set; }
         public bool Status { get; set; }
         public int? ProductionLineId { get; set; }
+        public string ProductionLineName { get; set; }
 
     }
 }

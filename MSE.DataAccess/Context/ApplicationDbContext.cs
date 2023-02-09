@@ -19,6 +19,7 @@ namespace MSE.DataAccess.Context
         public DbSet<MaintenancePersonnel> MaintenancePersonnels { get; set; }
         public DbSet<ProductionLine> ProductionLines { get; set; }
         public DbSet<WorkStation> WorkStations { get; set; }
+        public DbSet<WorkStationPersonnel> WorkStationPersonnels { get; set; }
 
     }
 }

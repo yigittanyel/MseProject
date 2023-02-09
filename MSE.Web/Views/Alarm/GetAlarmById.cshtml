@@ -1,0 +1,38 @@
+﻿@model MSE.Entity.Entities.Concrete.Alarm
+
+@{
+    ViewData["Title"] = "GetAlarmById";
+}
+
+<h2>Maintenance Personnel Information</h2>
+
+@using (Html.BeginForm("UpdateAlarm", "Alarm", FormMethod.Post))
+{
+    <div>
+        <div class="padding:10px;">
+            @Html.HiddenFor(x => x.AlarmId)
+            <label>Max Temperature: </label><br />
+            @Html.TextBoxFor(q => q.MaxTemperature, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Min Temperature: </label><br />
+            @Html.TextBoxFor(q => q.MinTemperature, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Max Pressure: </label><br />
+            @Html.TextBoxFor(q => q.MaxPressure, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Min Pressure:</label><br />
+            @Html.TextBoxFor(q => q.MinPressure, new { @class = "form-control"})
+        </div>
+
+        <div style="margin-top:15px;">
+            <button class="btn btn-primary">Update</button>
+        </div>
+    </div>
+}
+
+
+
+

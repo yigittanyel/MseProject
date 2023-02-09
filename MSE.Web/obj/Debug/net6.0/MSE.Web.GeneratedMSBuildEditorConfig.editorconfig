@@ -11,16 +11,44 @@ build_property.RootNamespace = MSE.Web
 build_property.ProjectDir = D:\repos\MseProject\MSE.Web\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = D:\repos\MseProject\MSE.Web
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/repos/MseProject/MSE.Web/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[D:/repos/MseProject/MSE.Web/Views/Alarm/AddNewAlarm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxhcm1cQWRkTmV3QWxhcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/MseProject/MSE.Web/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[D:/repos/MseProject/MSE.Web/Views/Alarm/GetAlarmById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxhcm1cR2V0QWxhcm1CeUlkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/MseProject/MSE.Web/Views/Alarm/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxhcm1cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/MseProject/MSE.Web/Views/PersonnelStation/AddNew.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVsU3RhdGlvblxBZGROZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/MseProject/MSE.Web/Views/PersonnelStation/GetById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVsU3RhdGlvblxHZXRCeUlkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/MseProject/MSE.Web/Views/PersonnelStation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVsU3RhdGlvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/MseProject/MSE.Web/Views/Personnel/AddNewPersonnel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVsXEFkZE5ld1BlcnNvbm5lbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/MseProject/MSE.Web/Views/Personnel/GetPersonnelById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVsXEdldFBlcnNvbm5lbEJ5SWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/MseProject/MSE.Web/Views/Personnel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVsXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/repos/MseProject/MSE.Web/Views/ProductionLine/AddNewProductionLine.cshtml]
@@ -41,6 +69,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/repos/MseProject/MSE.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/MseProject/MSE.Web/Views/WorkStation/AddNewWorkStation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya1N0YXRpb25cQWRkTmV3V29ya1N0YXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/MseProject/MSE.Web/Views/WorkStation/GetWorkStationById.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya1N0YXRpb25cR2V0V29ya1N0YXRpb25CeUlkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/repos/MseProject/MSE.Web/Views/WorkStation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya1N0YXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/repos/MseProject/MSE.Web/Views/_ViewImports.cshtml]

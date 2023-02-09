@@ -1,0 +1,34 @@
+﻿@model MSE.Entity.Entities.Concrete.WorkStation
+
+@{
+    ViewData["Title"] = "AddNewWorkStation";
+}
+
+<h2>Add New Work Station</h2>
+
+@using (Html.BeginForm("AddNewWorkStation", "WorkStation", FormMethod.Post))
+{
+    <div>
+        <div class="padding:10px;">
+            <label>Station Name: </label><br />
+            @Html.TextBoxFor(q => q.StationName, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Temperature: </label><br />
+            @Html.TextBoxFor(q => q.Temperature, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Pressure: </label><br />
+            @Html.TextBoxFor(q => q.Pressure, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Production Line</label><br />
+            @Html.DropDownListFor(q => q.ProductionLineId, (List<SelectListItem>)ViewBag.productionLine, "Please select: ", new { @class = "form-control" })
+        </div>
+
+        <div style="margin-top:15px;">
+            <button class="btn btn-primary">Add</button>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,41 @@
+﻿@using MSE.Entity.Entities.Concrete
+@model List<Alarm>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<h2>Alarm List</h2>
+
+<a href="/Alarm/AddNewAlarm/" class="btn btn-success">Add New Alarm</a>
+<br />
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Max Temperature</th>
+            <th scope="col">Min Temperature</th>
+            <th scope="col">Max Pressure</th>
+            <th scope="col">Min Pressure</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.MaxTemperature</td>
+                <td>@x.MinTemperature</td>
+                <td>@x.MaxPressure</td>
+                <td>@x.MinPressure</td>
+                <td><a href="/Alarm/DeleteAlarm/@x.AlarmId" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</a></td>
+                <td><a href="/Alarm/GetAlarmById/@x.AlarmId" class="btn btn-primary">Update</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

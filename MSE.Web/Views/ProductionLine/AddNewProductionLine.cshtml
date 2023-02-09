@@ -15,11 +15,11 @@
         </div>
         <div>
             <label>Start Date: </label><br />
-            @Html.TextBoxFor(q => q.FirstProductionDate, new { @class = "form-control" })
+            @Html.TextBoxFor(q => q.FirstProductionDate,"{0:yyyy-MM-dd}", new {@class = "form-control" , type = "date" })
         </div>
         <div>
             <label>Finish Date: </label><br />
-            @Html.TextBoxFor(q => q.LastProductionDate, new { @class = "form-control" })
+            @Html.TextBoxFor(q => q.LastProductionDate,"{0:yyyy-MM-dd}", new {@class = "form-control" , type = "date" })
         </div>
         <div style="margin-top:15px;">
             <button class="btn btn-info">Add</button>

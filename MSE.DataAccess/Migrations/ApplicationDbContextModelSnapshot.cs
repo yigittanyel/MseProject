@@ -151,6 +151,29 @@ namespace MSE.DataAccess.Migrations
                     b.ToTable("WorkStations");
                 });
 
+            modelBuilder.Entity("MSE.Entity.Entities.Concrete.WorkStationPersonnel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("MaintenancePersonnelId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WorkStationId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MaintenancePersonnelId");
+
+                    b.HasIndex("WorkStationId");
+
+                    b.ToTable("WorkStationPersonnels");
+                });
+
             modelBuilder.Entity("MaintenancePersonnelWorkStation", b =>
                 {
                     b.HasOne("MSE.Entity.Entities.Concrete.MaintenancePersonnel", null)
@@ -173,6 +196,25 @@ namespace MSE.DataAccess.Migrations
                         .HasForeignKey("ProductionLineId");
 
                     b.Navigation("ProductionLine");
+                });
+
+            modelBuilder.Entity("MSE.Entity.Entities.Concrete.WorkStationPersonnel", b =>
+                {
+                    b.HasOne("MSE.Entity.Entities.Concrete.MaintenancePersonnel", "MaintenancePersonnel")
+                        .WithMany()
+                        .HasForeignKey("MaintenancePersonnelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MSE.Entity.Entities.Concrete.WorkStation", "WorkStation")
+                        .WithMany()
+                        .HasForeignKey("WorkStationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MaintenancePersonnel");
+
+                    b.Navigation("WorkStation");
                 });
 
             modelBuilder.Entity("MSE.Entity.Entities.Concrete.ProductionLine", b =>

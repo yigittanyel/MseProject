@@ -1,0 +1,35 @@
+﻿@model MSE.Entity.Entities.Concrete.MaintenancePersonnel
+
+@{
+    ViewData["Title"] = "AddNewPersonnel";
+}
+
+<h2>Add New Personnel</h2>
+
+@using (Html.BeginForm("AddNewPersonnel", "Personnel", FormMethod.Post))
+{
+    <div>
+        <div class="padding:10px;">
+            <label>Name: </label><br />
+            @Html.TextBoxFor(q => q.Name, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Surname: </label><br />
+            @Html.TextBoxFor(q => q.Surname, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Phone: </label><br />
+            @Html.TextBoxFor(q => q.PhoneNumber, new { @class = "form-control" })
+        </div>
+        <div>
+            <label>Email</label><br />
+            @Html.TextBoxFor(q => q.EmailAdress, new { @class = "form-control" })
+        </div>
+
+        <div style="margin-top:15px;">
+            <button class="btn btn-primary">Add</button>
+        </div>
+    </div>
+}
+
+

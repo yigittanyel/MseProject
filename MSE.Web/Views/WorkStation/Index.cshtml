@@ -1,0 +1,41 @@
+﻿@using MSE.Entity.Entities.Concrete
+@model List<WorkStation>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<h2>Work Station List</h2>
+
+<a href="/WorkStation/AddNewWorkStation/" class="btn btn-success">Add New Production Line</a>
+<br />
+<br />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Work Station Name</th>
+            <th scope="col">Temperature</th>
+            <th scope="col">Pressure</th>
+            <th scope="col">Production Line</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Update</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.StationName</td>
+                <td>@x.Temperature</td>
+                <td>@x.Pressure</td>
+                <td>@x.ProductionLine.ProductionLineName</td>
+                <td><a href="/WorkStation/DeleteWorkStation/@x.WorkStationId" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</a></td>
+                <td><a href="/WorkStation/GetWorkStationById/@x.WorkStationId" class="btn btn-primary">Update</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+

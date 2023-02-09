@@ -532,6 +532,9 @@
         }
       },
       "MSE.Entity/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.13"
+        },
         "runtime": {
           "MSE.Entity.dll": {}
         }

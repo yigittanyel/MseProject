@@ -1,0 +1,31 @@
+﻿@model MSE.Entity.Entities.Concrete.WorkStationPersonnel
+
+@{
+    ViewData["Title"] = "AddNew";
+}
+
+
+<h2>Add New</h2>
+
+@using (Html.BeginForm("AddNew", "PersonnelStation", FormMethod.Post))
+{
+    <div>
+
+        <div>
+            <label>Maintenance Personnel </label><br />
+            @Html.DropDownListFor(q => q.MaintenancePersonnelId, (List<SelectListItem>)ViewBag.personnel, "Please select: ", new { @class = "form-control" })
+        </div>
+
+        <div>
+            <label>Work Station</label><br />
+            @Html.DropDownListFor(q => q.WorkStationId, (List<SelectListItem>)ViewBag.workStation, "Please select: ", new { @class = "form-control" })
+        </div>
+
+        <div style="margin-top:15px;">
+            <button class="btn btn-primary">Add</button>
+        </div>
+    </div>
+}
+
+
+

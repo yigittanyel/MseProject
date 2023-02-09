@@ -29,13 +29,13 @@ namespace MSE.Business.Features.Commands.ProductionLine
 
             public async Task<bool> Handle(UpdateProductionLineCommand request, CancellationToken cancellationToken)
             {
-                var product = await _productionLineRepository.Get(request.ProductionLineId);
-                if (product == null)
+                var productionLine = await _productionLineRepository.Get(request.ProductionLineId);
+                if (productionLine == null)
                     return false;
 
-                _mapper.Map(request, product);
+                _mapper.Map(request, productionLine);
 
-                await _productionLineRepository.Update(product);
+                await _productionLineRepository.Update(productionLine);
 
                 return true;
             }

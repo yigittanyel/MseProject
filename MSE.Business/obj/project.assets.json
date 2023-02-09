@@ -837,6 +837,9 @@
       "MSE.Entity/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.13"
+        },
         "compile": {
           "bin/placeholder/MSE.Entity.dll": {}
         },

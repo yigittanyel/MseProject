@@ -8,7 +8,7 @@
 
 
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-<h2>Birimler</h2>
+<h2>Production Line List</h2>
 
 <a href="/ProductionLine/AddNewProductionLine/" class="btn btn-success">Add New Production Line</a>
 <br />
@@ -28,8 +28,8 @@
         {
             <tr>
                 <td>@x.ProductionLineName</td>
-                <td>@x.FirstProductionDate</td>
-                <td>@x.LastProductionDate</td>
+                <td>@x.FirstProductionDate.ToShortDateString()</td>
+                <td>@x.LastProductionDate.ToShortDateString()</td>
                 <td><a href="/ProductionLine/DeleteProductionLine/@x.ProductionLineId" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</a></td>
                 <td><a href="/ProductionLine/GetProductionLineById/@x.ProductionLineId" class="btn btn-primary">Update</a></td>
             </tr>

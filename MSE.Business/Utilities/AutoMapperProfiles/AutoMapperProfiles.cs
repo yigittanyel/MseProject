@@ -5,12 +5,6 @@ using MSE.DTO.DTOs.MaintenancePersonnel;
 using MSE.DTO.DTOs.ProductionLine;
 using MSE.DTO.DTOs.WorkStation;
 using MSE.Entity.Entities.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace MSE.Business.Utilities.AutoMapperProfiles
 {
@@ -28,6 +22,7 @@ namespace MSE.Business.Utilities.AutoMapperProfiles
 
                 CreateMap<WorkStation, WorkStationDTO>().ReverseMap();
                 CreateMap<WorkStation, WorkStationToAddDTO>().ReverseMap();
+
 
                 CreateMap<ProductionLine, ProductionLineDTO>().ReverseMap();
                 CreateMap<ProductionLine, ProductionLineToAddDTO>().ReverseMap();
