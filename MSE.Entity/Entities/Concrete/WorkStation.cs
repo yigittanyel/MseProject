@@ -13,7 +13,7 @@ namespace MSE.Entity.Entities.Concrete
         public int WorkStationId { get; set; }
 
         [MaxLength(100)]
-        public string StationName { get; set; }
+        public string? StationName { get; set; }
         public decimal Temperature { get; set; }
         public decimal Pressure { get; set; }
         public bool Status { get; set; }

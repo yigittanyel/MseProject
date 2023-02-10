@@ -134,7 +134,6 @@ namespace MSE.DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("StationName")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 

@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSE.Entity", "MSE.Entity\MSE.Entity.csproj", "{30AEF600-0097-417D-B41F-F45188BF99DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSE.Entity", "MSE.Entity\MSE.Entity.csproj", "{30AEF600-0097-417D-B41F-F45188BF99DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSE.DTO", "MSE.DTO\MSE.DTO.csproj", "{7A99A325-EA0C-456B-9F00-EC4D0DFBF1E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSE.DTO", "MSE.DTO\MSE.DTO.csproj", "{7A99A325-EA0C-456B-9F00-EC4D0DFBF1E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSE.DataAccess", "MSE.DataAccess\MSE.DataAccess.csproj", "{A12270D4-6843-4770-BADF-B2D7392A2F2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSE.DataAccess", "MSE.DataAccess\MSE.DataAccess.csproj", "{A12270D4-6843-4770-BADF-B2D7392A2F2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSE.Business", "MSE.Business\MSE.Business.csproj", "{C8EBF681-0B26-401C-902E-3D8F845F016C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSE.Business", "MSE.Business\MSE.Business.csproj", "{C8EBF681-0B26-401C-902E-3D8F845F016C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSE.Web", "MSE.Web\MSE.Web.csproj", "{BCA30B51-6126-4BC5-B523-B8B0502B1165}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSE.Web", "MSE.Web\MSE.Web.csproj", "{BCA30B51-6126-4BC5-B523-B8B0502B1165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSE.Console", "MSE.Console\MSE.Console.csproj", "{75082751-2D6F-4A00-8215-C67CE5683C3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSE.API", "MSE.API\MSE.API.csproj", "{F6B12DF7-112C-4B46-8A93-89F54729D12C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{BCA30B51-6126-4BC5-B523-B8B0502B1165}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCA30B51-6126-4BC5-B523-B8B0502B1165}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCA30B51-6126-4BC5-B523-B8B0502B1165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75082751-2D6F-4A00-8215-C67CE5683C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75082751-2D6F-4A00-8215-C67CE5683C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75082751-2D6F-4A00-8215-C67CE5683C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75082751-2D6F-4A00-8215-C67CE5683C3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6B12DF7-112C-4B46-8A93-89F54729D12C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B12DF7-112C-4B46-8A93-89F54729D12C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B12DF7-112C-4B46-8A93-89F54729D12C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B12DF7-112C-4B46-8A93-89F54729D12C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

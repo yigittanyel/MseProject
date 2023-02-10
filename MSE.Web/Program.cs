@@ -1,17 +1,32 @@
-using MediatR;
 using MSE.Business.Extensions;
 using MSE.DataAccess.Extensions;
+using Serilog;
+using Serilog.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
-
 #region eklenen kisimlar
 
 builder.Services.LoadBusinessLayerExtension();
 builder.Services.LoadDataAccessLayerExtension(builder.Configuration);
+
+//Logging with Serilog
+Logger log = new LoggerConfiguration()
+            .WriteTo.File("logs/log.txt")
+            .WriteTo.MSSqlServer(
+            connectionString: builder.Configuration.GetConnectionString("cnnstr"),
+            sinkOptions: new Serilog.Sinks.MSSqlServer.MSSqlServerSinkOptions()
+            {
+                TableName = "Logs",
+                AutoCreateSqlTable = true
+            })
+            .MinimumLevel.Information()
+            .CreateLogger();
+
+builder.Host.UseSerilog(log);
 
 #endregion
 
@@ -26,7 +41,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();

@@ -22,6 +22,7 @@ namespace MSE.Business.Utilities.AutoMapperProfiles
 
                 CreateMap<WorkStation, WorkStationDTO>().ReverseMap();
                 CreateMap<WorkStation, WorkStationToAddDTO>().ReverseMap();
+                CreateMap<WorkStation, WorkStationRandomValueDTO>().ReverseMap();
 
 
                 CreateMap<ProductionLine, ProductionLineDTO>().ReverseMap();
