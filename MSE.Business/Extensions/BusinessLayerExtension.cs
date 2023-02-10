@@ -17,7 +17,6 @@ namespace MSE.Business.Extensions
             var ass = Assembly.GetExecutingAssembly();
             serviceCollection.AddAutoMapper(ass);
             serviceCollection.AddMediatR(ass);
-
         }
     }
 }

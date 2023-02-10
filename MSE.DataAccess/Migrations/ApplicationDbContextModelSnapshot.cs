@@ -34,7 +34,7 @@ namespace MSE.DataAccess.Migrations
 
                     b.HasIndex("WorkStationsWorkStationId");
 
-                    b.ToTable("MaintenancePersonnelWorkStation");
+                    b.ToTable("MaintenancePersonnelWorkStation", (string)null);
                 });
 
             modelBuilder.Entity("MSE.Entity.Entities.Concrete.Alarm", b =>
@@ -64,7 +64,7 @@ namespace MSE.DataAccess.Migrations
 
                     b.HasIndex("WorkStationId");
 
-                    b.ToTable("Alarms");
+                    b.ToTable("Alarms", (string)null);
                 });
 
             modelBuilder.Entity("MSE.Entity.Entities.Concrete.EmailData", b =>
@@ -93,7 +93,7 @@ namespace MSE.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("EmailDatas");
+                    b.ToTable("EmailDatas", (string)null);
                 });
 
             modelBuilder.Entity("MSE.Entity.Entities.Concrete.MaintenancePersonnel", b =>
@@ -126,7 +126,7 @@ namespace MSE.DataAccess.Migrations
 
                     b.HasKey("MaintenancePersonnelId");
 
-                    b.ToTable("MaintenancePersonnels");
+                    b.ToTable("MaintenancePersonnels", (string)null);
                 });
 
             modelBuilder.Entity("MSE.Entity.Entities.Concrete.ProductionLine", b =>
@@ -150,7 +150,7 @@ namespace MSE.DataAccess.Migrations
 
                     b.HasKey("ProductionLineId");
 
-                    b.ToTable("ProductionLines");
+                    b.ToTable("ProductionLines", (string)null);
                 });
 
             modelBuilder.Entity("MSE.Entity.Entities.Concrete.WorkStation", b =>
@@ -181,7 +181,7 @@ namespace MSE.DataAccess.Migrations
 
                     b.HasIndex("ProductionLineId");
 
-                    b.ToTable("WorkStations");
+                    b.ToTable("WorkStations", (string)null);
                 });
 
             modelBuilder.Entity("MSE.Entity.Entities.Concrete.WorkStationPersonnel", b =>
@@ -204,7 +204,7 @@ namespace MSE.DataAccess.Migrations
 
                     b.HasIndex("WorkStationId");
 
-                    b.ToTable("WorkStationPersonnels");
+                    b.ToTable("WorkStationPersonnels", (string)null);
                 });
 
             modelBuilder.Entity("MaintenancePersonnelWorkStation", b =>

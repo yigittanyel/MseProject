@@ -1,0 +1,43 @@
+﻿@model IEnumerable<MSE.Entity.Entities.Concrete.WorkStation>
+
+@{
+ViewData["Title"] = "SearchByParameter";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<h2>Find It!</h2>
+<hr />
+<h6>You can search by production line name, work station name and valid production line working date in this page.</h6>
+<hr />
+<br />
+<p>
+    @using (@Html.BeginForm())
+    {
+        @Html.TextBox("Search")
+        <input type="datetime-local" name="startDate" placeholder="Start Date">
+        <input type="datetime-local" name="endDate" placeholder="End Date">
+        <input type="submit" value="search" />
+    }
+</p>
+<table class="table">
+    <tr>
+        <th scope="col">Production Line</th>
+        <th scope="col">Work Station Name</th>
+        <th scope="col">Temperature</th>
+        <th scope="col">Pressure</th>
+        <th scope="col">Production Line Start Date</th>
+        <th scope="col">Production Line Finish Date</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ProductionLine.ProductionLineName</td>
+            <td>@x.StationName</td>
+            <td>@x.Temperature</td>
+            <td>@x.Pressure</td>
+            <td>@x.ProductionLine.FirstProductionDate.ToShortDateString()</td>
+            <td>@x.ProductionLine.LastProductionDate.ToShortDateString()</td>
+        </tr>
+    }
+</table>
+

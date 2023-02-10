@@ -1,9 +1,7 @@
 ﻿using MSE.DTO.DTOs.WorkStation;
-using Newtonsoft.Json;
-using System.Text;
+using System.Net.Http.Json;
 
 var random = new Random(DateTime.Now.Millisecond);
-
 var data = new WorkStationRandomValueDTO
 {
     WorkStationId = random.Next(1, 100),
@@ -11,18 +9,27 @@ var data = new WorkStationRandomValueDTO
     Pressure = (decimal)Math.Round(random.NextDouble() * 2000, 2),
     Status = random.Next(0, 1) == 1
 };
-var json = JsonConvert.SerializeObject(data);
-var content = new StringContent(json, Encoding.UTF8, "application/json");
+
 
 using (var client = new HttpClient())
 {
-    var response = client.PostAsync("http://localhost:5002/WorkStationRandom/Post", content).Result;
+    var content = new FormUrlEncodedContent(new[]
+   {
+        new KeyValuePair<string, string>("WorkStationId", data.WorkStationId.ToString()),
+        new KeyValuePair<string, string>("Temperature", data.Temperature.ToString()),
+        new KeyValuePair<string, string>("Pressure", data.Pressure.ToString()),
+        new KeyValuePair<string, string>("Status", data.Status.ToString())
+    });
+
+    var response = await client.PostAsync("http://localhost:5002/WorkStationRandom/Post", content);
+
     if (response.IsSuccessStatusCode)
     {
-        Console.WriteLine("Data saved successfully!");
+        Console.WriteLine($"Data saved successfully!\n\nWorkStationId:{data.WorkStationId}\nTemperature:{data.Temperature}\nPressure:{data.Pressure}\nStatus:{data.Status}");
     }
     else
     {
         Console.WriteLine("Failed to save data: " + response.StatusCode);
     }
 }
+Console.ReadLine();

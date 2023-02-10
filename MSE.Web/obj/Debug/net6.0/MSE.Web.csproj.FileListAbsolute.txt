@@ -360,6 +360,7 @@ D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGene
 D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\MimeKit.dll
 D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\NuGet.Common.dll
@@ -371,6 +372,7 @@ D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\NuGet.Packaging.dll
 D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\NuGet.ProjectModel.dll
 D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\NuGet.Protocol.dll
 D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\NuGet.Versioning.dll
+D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\Serilog.dll
 D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\Serilog.AspNetCore.dll
 D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
@@ -587,5 +589,3 @@ D:\repos\MseProject\MSE.Web\obj\Debug\net6.0\refint\MSE.Web.dll
 D:\repos\MseProject\MSE.Web\obj\Debug\net6.0\MSE.Web.pdb
 D:\repos\MseProject\MSE.Web\obj\Debug\net6.0\MSE.Web.genruntimeconfig.cache
 D:\repos\MseProject\MSE.Web\obj\Debug\net6.0\ref\MSE.Web.dll
-D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\MimeKit.dll
-D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\BouncyCastle.Crypto.dll

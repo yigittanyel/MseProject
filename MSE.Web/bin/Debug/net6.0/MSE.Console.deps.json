@@ -8,12 +8,25 @@
     ".NETCoreApp,Version=v6.0": {
       "MSE.Console/1.0.0": {
         "dependencies": {
+          "AutoMapper": "12.0.1",
           "MSE.DTO": "1.0.0",
+          "MSE.Entity": "1.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.13",
           "System.Net.Http": "4.3.0"
         },
         "runtime": {
           "MSE.Console.dll": {}
+        }
+      },
+      "AutoMapper/12.0.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/AutoMapper.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.1.0"
+          }
         }
       },
       "Microsoft.AspNetCore.JsonPatch/6.0.13": {
@@ -42,6 +55,14 @@
         }
       },
       "Microsoft.CSharp/4.7.0": {},
+      "Microsoft.EntityFrameworkCore.Abstractions/6.0.13": {
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
+            "assemblyVersion": "6.0.13.0",
+            "fileVersion": "6.0.1322.58004"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Newtonsoft.Json/13.0.1": {
@@ -457,6 +478,14 @@
         "runtime": {
           "MSE.DTO.dll": {}
         }
+      },
+      "MSE.Entity/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.13"
+        },
+        "runtime": {
+          "MSE.Entity.dll": {}
+        }
       }
     }
   },
@@ -465,6 +494,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AutoMapper/12.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hvV62vl6Hp/WfQ24yzo3Co9+OPl8wH8hApwVtgWpiAynVJkUcs7xvehnSftawL8Pe8FrPffBRM3hwzLQqWDNjA==",
+      "path": "automapper/12.0.1",
+      "hashPath": "automapper.12.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.JsonPatch/6.0.13": {
       "type": "package",
@@ -486,6 +522,13 @@
       "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
       "path": "microsoft.csharp/4.7.0",
       "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Abstractions/6.0.13": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-m0PpkBONNPOEdVXkHNfdDETMAZKqWEX6E4kzmrvC4b+5OgFCnuxJHyAJ3Relyw8jsjsCFednrFI3nINXGDX5Sg==",
+      "path": "microsoft.entityframeworkcore.abstractions/6.0.13",
+      "hashPath": "microsoft.entityframeworkcore.abstractions.6.0.13.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -845,6 +888,11 @@
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
     "MSE.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MSE.Entity/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

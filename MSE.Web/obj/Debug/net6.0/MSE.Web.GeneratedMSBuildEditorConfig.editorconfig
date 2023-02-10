@@ -87,8 +87,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya1N0YXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/repos/MseProject/MSE.Web/Views/WorkStation/Search.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya1N0YXRpb25cU2VhcmNoLmNzaHRtbA==
+[D:/repos/MseProject/MSE.Web/Views/WorkStation/SearchByParameter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya1N0YXRpb25cU2VhcmNoQnlQYXJhbWV0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/repos/MseProject/MSE.Web/Views/_ViewImports.cshtml]

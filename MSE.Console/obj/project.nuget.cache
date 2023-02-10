@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "fpLhgEnvS+TGYc0IjgSHi2LSVZtoB8WTA5M4aWBifspiYTAU3MW3JMqwr39ZEpJsbOGaYdpv4EuLpeJi0rIh9A==",
+  "dgSpecHash": "2+jUiA/D3TQ9FKdhcoNSH5vYr9r7My+W5o2oiJ3QEkIghJ63y4KlKC1knVxmMr9XEE2fTMuXISyUcBwJe7MVCg==",
   "success": true,
   "projectFilePath": "D:\\repos\\MseProject\\MSE.Console\\MSE.Console.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\MSI\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.13\\microsoft.aspnetcore.jsonpatch.6.0.13.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.13\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.13.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\MSI\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.13\\microsoft.entityframeworkcore.abstractions.6.0.13.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\MSI\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",

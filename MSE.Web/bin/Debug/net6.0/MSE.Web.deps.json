@@ -3624,7 +3624,9 @@
       },
       "MSE.Console/1.0.0": {
         "dependencies": {
+          "AutoMapper": "12.0.1",
           "MSE.DTO": "1.0.0",
+          "MSE.Entity": "1.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.13",
           "System.Net.Http": "4.3.0"
         },
