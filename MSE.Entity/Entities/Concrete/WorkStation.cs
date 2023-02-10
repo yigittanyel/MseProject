@@ -21,5 +21,6 @@ namespace MSE.Entity.Entities.Concrete
         public int? ProductionLineId { get; set; }
         public virtual ProductionLine ProductionLine { get; set; }
         public virtual ICollection<MaintenancePersonnel> MaintenancePersonnels { get; set; }
+        public virtual ICollection<Alarm> Alarms { get; set; }
     }
 }

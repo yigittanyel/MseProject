@@ -9,6 +9,10 @@
 @using (Html.BeginForm("AddNewAlarm", "Alarm", FormMethod.Post))
 {
     <div>
+        <div>
+            <label>Work Station</label><br />
+            @Html.DropDownListFor(q => q.WorkStationId, (List<SelectListItem>)ViewBag.workStation, "Please select: ", new { @class = "form-control" })
+        </div>
         <div class="padding:10px;">
             <label>Max Temperature: </label><br />
             @Html.TextBoxFor(q => q.MaxTemperature, new { @class = "form-control" })

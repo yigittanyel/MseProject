@@ -15,6 +15,9 @@ namespace MSE.Entity.Entities.Concrete
         public decimal MinTemperature{ get; set; }
         public decimal MaxPressure { get; set; }
         public decimal MinPressure { get; set; }
+        public int? WorkStationId { get; set; }
+        public virtual WorkStation WorkStation { get; set; }
+
 
     }
 }

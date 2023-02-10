@@ -587,3 +587,5 @@ D:\repos\MseProject\MSE.Web\obj\Debug\net6.0\refint\MSE.Web.dll
 D:\repos\MseProject\MSE.Web\obj\Debug\net6.0\MSE.Web.pdb
 D:\repos\MseProject\MSE.Web\obj\Debug\net6.0\MSE.Web.genruntimeconfig.cache
 D:\repos\MseProject\MSE.Web\obj\Debug\net6.0\ref\MSE.Web.dll
+D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\MimeKit.dll
+D:\repos\MseProject\MSE.Web\bin\Debug\net6.0\BouncyCastle.Crypto.dll

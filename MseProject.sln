@@ -13,9 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSE.Business", "MSE.Busines
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSE.Web", "MSE.Web\MSE.Web.csproj", "{BCA30B51-6126-4BC5-B523-B8B0502B1165}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSE.Console", "MSE.Console\MSE.Console.csproj", "{75082751-2D6F-4A00-8215-C67CE5683C3F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSE.API", "MSE.API\MSE.API.csproj", "{F6B12DF7-112C-4B46-8A93-89F54729D12C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MSE.Console", "MSE.Console\MSE.Console.csproj", "{75082751-2D6F-4A00-8215-C67CE5683C3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +45,6 @@ Global
 		{75082751-2D6F-4A00-8215-C67CE5683C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75082751-2D6F-4A00-8215-C67CE5683C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75082751-2D6F-4A00-8215-C67CE5683C3F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6B12DF7-112C-4B46-8A93-89F54729D12C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6B12DF7-112C-4B46-8A93-89F54729D12C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6B12DF7-112C-4B46-8A93-89F54729D12C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6B12DF7-112C-4B46-8A93-89F54729D12C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

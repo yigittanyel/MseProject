@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using System.Text;
 
-var random = new Random();
+var random = new Random(DateTime.Now.Millisecond);
 
 var data = new WorkStationRandomValueDTO
 {

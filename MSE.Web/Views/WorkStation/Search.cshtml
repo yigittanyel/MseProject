@@ -1,0 +1,77 @@
+﻿@using MSE.Entity.Entities.Concrete
+@model List<WorkStation>
+
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<h2>Find It!</h2><hr />
+<h6>You can search by production line name,work station name and valid production line working date in this page.</h6> <hr />
+
+<br />
+<table class="table table-dark table-striped" style="border:1px solid white;" id="tbl1">
+    <thead>
+        <tr>
+            <th scope="col">Production Line</th>
+            <th scope="col">Work Station Name</th>
+            <th scope="col">Temperature</th>
+            <th scope="col">Pressure</th>
+            <th scope="col">Production Line Start Date</th>
+            <th scope="col">Production Line Finish Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.ProductionLine.ProductionLineName</td>
+                <td>@x.StationName</td>
+                <td>@x.Temperature</td>
+                <td>@x.Pressure</td>
+                <td>@x.ProductionLine.FirstProductionDate.ToShortDateString()</td>
+                <td>@x.ProductionLine.LastProductionDate.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+<script>
+    $('#tbl1').dataTable({
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/English.json"
+        }
+    });
+</script>
+
+
+<style>
+    table.dataTable thead .sorting_asc:after {
+        opacity: 1;
+        content: "↓";
+    }
+
+    table.dataTable thead .sorting:after {
+        opacity: 1;
+        content: "↓";
+    }
+
+    table.dataTable thead .sorting_desc:after {
+        opacity: 1;
+        content: "↑";
+    }
+
+    table.dataTable thead .sorting_desc:after {
+        opacity: 1;
+        content: "↑";
+    }
+</style>

@@ -24,6 +24,14 @@
             @Html.TextBoxFor(q => q.Pressure, new { @class = "form-control" })
         </div>
         <div>
+            <label>Status: </label><br />
+            @Html.DropDownListFor(q => q.Status, new List<SelectListItem>()
+                    {
+                    new SelectListItem() { Text = "Active", Value = "True" },
+                    new SelectListItem() { Text = "Passive", Value = "False"}
+                    }, "Please Select", new { @class="form-control" })
+        </div>
+        <div>
             <label>Production Line</label><br />
             @Html.TextBoxFor(q => q.ProductionLine.ProductionLineName, new { @class = "form-control",@readonly="readonly" })
             @Html.DropDownListFor(q => q.ProductionLineId, (List<SelectListItem>)ViewBag.productionLine, "Please select: ", new { @class = "form-control" })

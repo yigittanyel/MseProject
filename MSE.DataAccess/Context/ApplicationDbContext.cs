@@ -20,6 +20,7 @@ namespace MSE.DataAccess.Context
         public DbSet<ProductionLine> ProductionLines { get; set; }
         public DbSet<WorkStation> WorkStations { get; set; }
         public DbSet<WorkStationPersonnel> WorkStationPersonnels { get; set; }
+        public DbSet<EmailData> EmailDatas { get; set; }
 
     }
 }

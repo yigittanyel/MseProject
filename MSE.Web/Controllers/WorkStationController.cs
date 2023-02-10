@@ -17,9 +17,13 @@ namespace MSE.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var workStations = await _dbContext.WorkStations.Include(x => x.ProductionLine).ToListAsync();
+            var workStations = await _dbContext.WorkStations.Include(x => x.ProductionLine)
+                                                            .Where(x=>x.Status==true)
+                                                            .ToListAsync();
             return View(workStations);
         }
+
+
         [HttpGet]
         public IActionResult AddNewWorkStation()
         {
@@ -38,6 +42,7 @@ namespace MSE.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> AddNewWorkStation(WorkStation entity)
         {
+            entity.Status = true;
             await _dbContext.WorkStations.AddAsync(entity);
             await _dbContext.SaveChangesAsync();
             return RedirectToAction("Index");
@@ -62,11 +67,18 @@ namespace MSE.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateWorkStation (WorkStation entity)
         {
-            _dbContext.Entry(entity).State = EntityState.Modified;
-            entity.Status = true;
+            _dbContext.Entry(entity).State = EntityState.Modified;        
             await _dbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
+        public async Task<IActionResult> Search()
+        {
+            var value = await _dbContext.WorkStations.Include(x => x.ProductionLine)
+                                                     .Where(x => x.Status == true)
+                                                     .ToListAsync();
+            return View(value);
+        }
+
 
         public async Task<IActionResult> DeleteWorkStation(int id)
         {

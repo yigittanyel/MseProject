@@ -27,8 +27,9 @@ namespace MSE.Web.Controllers
         [HttpPost]
         public IHttpActionResult Post([FromBody] WorkStationRandomValueDTO data)
         {
-            if (ModelState.IsValid)
+            if (data != null)
             {
+                data.Status = true;
                 var workStation = _mapper.Map<WorkStation>(data);
                 _dbContext.WorkStations.Add(workStation);
                 _dbContext.SaveChanges();
