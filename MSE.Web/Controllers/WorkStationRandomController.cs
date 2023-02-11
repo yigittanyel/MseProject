@@ -20,6 +20,7 @@ namespace MSE.Web.Controllers
             _mapper = mapper;
         }
 
+        //Console uygulamasından gelen datayı alarak veritabanına post eden endpoint
         [HttpPost]
         public IActionResult Post([FromBody] WorkStationRandomValueDTO data)
         {
@@ -34,7 +35,7 @@ namespace MSE.Web.Controllers
             return Ok();
 
         }
-
+        //server'a get isteği geldiğinde çalışıyor mu diye kontrol amaçlı oluşturulan endpoint.
         [HttpGet]
         public string Get()
         {

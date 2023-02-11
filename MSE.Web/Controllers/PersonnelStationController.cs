@@ -15,6 +15,7 @@ namespace MSE.Web.Controllers
             _dbContext = dbContext;
         }
 
+        //Sorumlu personel ve onun bakımından sorumlu olduğu iş istasyonları listelenir.
         public async Task<IActionResult> Index()
         {
             var value = await _dbContext.WorkStationPersonnels
@@ -49,6 +50,8 @@ namespace MSE.Web.Controllers
             return View();
         }
 
+        //Yeni bir değer post edilmek istendiğinde çalışacak endpoint.
+
         [HttpPost]
         public async Task<IActionResult> AddNew(WorkStationPersonnel entity)
         {
@@ -57,6 +60,7 @@ namespace MSE.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        //İlgili kaydı veritabanından silmek istediğimizde çalışacak endpoint.
         public async Task<IActionResult> Delete(int id)
         {
             var deletedItem = await _dbContext.WorkStationPersonnels.FirstOrDefaultAsync(x => x.Id == id);
@@ -65,6 +69,7 @@ namespace MSE.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        //İlgili kayda ait bilgilerin getirileceği endpoint.
         public async Task<IActionResult> GetById(int id)
         {
             List<SelectListItem> workStation = (from x in _dbContext.WorkStations.ToList()
@@ -89,6 +94,7 @@ namespace MSE.Web.Controllers
             return View("GetById", item);
         }
 
+        //Verilerimizi güncellemek için gerekli endpoint.
         [HttpPost]
         public async Task<IActionResult> Update(WorkStationPersonnel entity)
         {

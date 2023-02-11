@@ -15,6 +15,7 @@ namespace MSE.Web.Controllers
             _dbContext = dbContext;
         }
 
+        //Kullanıcılarımızı listeler.
         public async Task<IActionResult> Index()
         {
             var personnels = await _dbContext.MaintenancePersonnels.ToListAsync();
@@ -27,6 +28,7 @@ namespace MSE.Web.Controllers
             return View();
         }
 
+        //Yeni bir personel eklemeye yarayan endpoint.
         [HttpPost]
         public async Task<IActionResult> AddNewPersonnel(MaintenancePersonnel entity)
         {
@@ -35,12 +37,14 @@ namespace MSE.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        //İlgili personele ait kaydın detaylarının getirileceği endpoint.
         public async Task<IActionResult> GetPersonnelById(int id)
         {
             var personnel = await _dbContext.MaintenancePersonnels.FindAsync(id);
             return View("GetPersonnelById", personnel);
         }
 
+        //Güncelleme işlemi.
         [HttpPost]
         public async Task<IActionResult> UpdatePersonnel(MaintenancePersonnel entity)
         {
@@ -49,6 +53,7 @@ namespace MSE.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        //Personeli veritabanından silmek istersek çalışacak olan yapı.
         public async Task<IActionResult> DeletePersonnel(int id)
         {
             var deletedPersonnel = _dbContext.MaintenancePersonnels.FirstOrDefault(x => x.MaintenancePersonnelId == id);

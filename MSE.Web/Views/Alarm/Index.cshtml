@@ -15,10 +15,15 @@
     <thead>
         <tr>
             <th scope="col">Work Station</th>
+            <th scope="col">Temperature</th>
             <th scope="col">Max Temperature</th>
             <th scope="col">Min Temperature</th>
+            <th scope="col">Pressure</th>
             <th scope="col">Max Pressure</th>
             <th scope="col">Min Pressure</th>
+            <th scope="col">Temperature Status</th>
+            <th scope="col">Pressure Status</th>
+            <th scope="col">Send Email</th>
             <th scope="col">Delete</th>
             <th scope="col">Update</th>
         </tr>
@@ -26,12 +31,26 @@
     <tbody>
         @foreach (var x in Model)
         {
-            <tr>
+            <tr style="background-color:@(x.WorkStation.Temperature<x.MinTemperature || x.WorkStation.Temperature>x.MaxTemperature || x.WorkStation.Pressure<x.MinPressure || x.WorkStation.Pressure>x.MaxPressure ? "#C34A2C" : "lightgreen")">
                 <td>@x.WorkStation.StationName</td>
+                <td>@x.WorkStation.Temperature</td>
                 <td>@x.MaxTemperature</td>
                 <td>@x.MinTemperature</td>
+                <td>@x.WorkStation.Pressure</td>
                 <td>@x.MaxPressure</td>
                 <td>@x.MinPressure</td>
+                <td>@(x.WorkStation.Temperature >= x.MinTemperature && x.WorkStation.Temperature <= x.MaxTemperature ? "Valid" : "Invalid")</td>
+                <td>@(x.WorkStation.Pressure >= x.MinPressure && x.WorkStation.Pressure <= x.MaxPressure ? "Valid" : "Invalid")</td>
+                <td>
+                    @if (x.WorkStation.Temperature >= x.MinTemperature && x.WorkStation.Temperature <= x.MaxTemperature && x.WorkStation.Pressure >= x.MinPressure && x.WorkStation.Pressure <= x.MaxPressure)
+                    {
+                        <a href="#" class="btn btn-success" style="display:none;">Send</a>
+                    }
+                    else
+                    {
+                        <a href="/Alarm/SendEmail/@x.WorkStationId" class="btn btn-success">Send</a>
+                    }
+                </td>
                 <td><a href="/Alarm/DeleteAlarm/@x.AlarmId" class="btn btn-danger" onclick="return confirm('Are you sure?');">Delete</a></td>
                 <td><a href="/Alarm/GetAlarmById/@x.AlarmId" class="btn btn-primary">Update</a></td>
             </tr>

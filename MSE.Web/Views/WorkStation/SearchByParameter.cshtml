@@ -14,8 +14,8 @@ ViewData["Title"] = "SearchByParameter";
     @using (@Html.BeginForm())
     {
         @Html.TextBox("Search")
-        <input type="datetime-local" name="startDate" placeholder="Start Date">
-        <input type="datetime-local" name="endDate" placeholder="End Date">
+        <input type="date" name="startDate" placeholder="Start Date">
+        <input type="date" name="endDate" placeholder="End Date">
         <input type="submit" value="search" />
     }
 </p>
