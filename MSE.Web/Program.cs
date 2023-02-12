@@ -10,7 +10,7 @@ builder.Services.AddControllersWithViews()
                 .AddRazorRuntimeCompilation()
                 .AddNewtonsoftJson();
 
-#region eklenen kisimlar
+#region define dependency injection parts
 
 builder.Services.LoadBusinessLayerExtension();
 builder.Services.LoadDataAccessLayerExtension(builder.Configuration);

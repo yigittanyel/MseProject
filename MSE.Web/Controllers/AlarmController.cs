@@ -82,26 +82,6 @@ namespace MSE.Web.Controllers
             await _dbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
-
-        //public async Task SendEmail()
-        //{
-        //    //var value = await _dbContext.WorkStationPersonnels.Where(x => x.WorkStationId == entity.WorkStationId).FirstOrDefaultAsync();
-
-        //    MailMessage message = new MailMessage();
-        //    message.From = new MailAddress("tanyelyigit@gmail.com");
-        //    message.To.Add("value.MaintenancePersonnel.EmailAdress");
-        //    message.Subject = "Important Notification";
-        //    message.Body = "There is an error!";
-
-        //    SmtpClient smtp = new SmtpClient();
-        //    smtp.Port = 587;
-        //    smtp.Host = "smtp.gmail.com";
-        //    smtp.EnableSsl = true;
-        //    smtp.UseDefaultCredentials = false;
-        //    smtp.Credentials = new NetworkCredential("tanyelyigit@gmail.com", "mosmfvafzrcjlsqb");
-        //    smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-        //    smtp.Send(message);
-        //}
         public async Task<IActionResult> SendEmail(int id)
         {
             var personnel=await _dbContext.WorkStationPersonnels.Where(x=>x.WorkStationId==id).Select(x=>x.MaintenancePersonnel.EmailAdress).ToListAsync();
@@ -118,7 +98,7 @@ namespace MSE.Web.Controllers
                 smtp.Host = "smtp.gmail.com";
                 smtp.EnableSsl = true;
                 smtp.UseDefaultCredentials = false;
-                smtp.Credentials = new NetworkCredential("tanyelyigit@gmail.com", "mosmfvafzrcjlsqb");
+                smtp.Credentials = new NetworkCredential("tanyelyigit@gmail.com", "my-password");
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.Send(message);
             }
